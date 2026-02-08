@@ -1,16 +1,37 @@
-#Safaa Shnewer
-#Tech Check 1
-#23/9/2025
+/*
+*Assignment 1
+*Student.java
+ * Safaa Shnewer
+ * W0501121
+ */
 
 
-bill = int(input("Enter the original bill amount: "))
 
-tax = bill * 0.15
-tip = bill * 0.20
-total = bill + tax + tip
-print(bill)
-print(tax)
-print(tip)
-print(total)
 
-# I'm not sure if my code have to be longer or if I have to use more code lines but this what i really understand so far 
+public class Student {
+    public String name;
+    public double assignment1;
+    public double assignment2;
+
+
+    public Student(String name, double assignment1, double assignment2) {
+        this.name = name;
+        this.assignment1 = assignment1;
+        this.assignment2 = assignment2;
+    }
+
+
+    public double getTotal() {
+        return assignment1 + assignment2;
+    }
+
+
+    public void outputStudentDetails() {
+        System.out.println(
+            name + ":\t\tAssignment1 – " + assignment1 +
+            "\t\tAssignment2 – " + assignment2 +
+            "\t\tTotal – " + getTotal()
+        );
+    }
+}
+
